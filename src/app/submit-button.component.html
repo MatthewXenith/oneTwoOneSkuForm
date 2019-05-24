@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="skuForm">
+    <div>
+        <label for="oldSku">Old SKU: </label>
+        <input id="oldSku" #oldSku formControlName="oldSku">
+    </div>
+    <div>
+        <label for="newSku">New SKU: </label>
+        <input id="newSku" #newSku formControlName="newSku">    
+    </div>
+    <div>
+        <label for="newDesc">New Description: </label>
+        <input id="newDesc" #newDesc formControlName="newDesc">    
+    </div>
+    <div>
+        <input type="radio" name="orderType" formControlName="orderType" value="STDORD" > Standard Order Only
+        <input type="radio" name="orderType" formControlName="orderType" value="RC"> Recon only
+        <input type="radio" name="orderType" formControlName="orderType" value="both"> Standard and Recon
+    </div>
+    <button type="submit">Submit</button>
+    <h1>{{clickMessage}}</h1>
+</form>
