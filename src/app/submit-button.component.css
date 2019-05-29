@@ -1,3 +1,15 @@
 div {
     padding: 20px;
 }
+
+.center {
+    text-align: center;
+}
+
+.message{
+    color: green;
+}
+
+.error{
+    color: red;
+}

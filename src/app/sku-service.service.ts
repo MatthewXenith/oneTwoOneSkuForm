@@ -13,16 +13,16 @@ const httpOptions = {
 
 
 export class SkuServiceService {
-
-  // skuUrl = 'https://swapi.co/api/starships/59/';
-   skuUrl = 'http://sp-to-exp-staging-dev.us-e2.cloudhub.io/update/sku';
+  //    skuUrl = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+    skuUrl = 'http://sp-to-exp-staging-dev.us-e2.cloudhub.io/update/sku';
 
   constructor(private http: HttpClient) { }
 
   getSku(skuForm) {
     console.log(skuForm);
     skuForm = [skuForm];
-    return this.http.post<any>(this.skuUrl, skuForm, httpOptions);
+    let resp = this.http.post<any>(this.skuUrl, skuForm, httpOptions);
+    return resp;
   }
 
 }

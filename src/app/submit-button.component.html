@@ -5,17 +5,20 @@
     </div>
     <div>
         <label for="newSku">New SKU: </label>
-        <input id="newSku" #newSku formControlName="newSku">    
+        <input id="newSku" #newSku formControlName="newSku">
     </div>
     <div>
         <label for="newDesc">New Description: </label>
-        <input id="newDesc" #newDesc formControlName="newDesc">    
+        <input id="newDesc" #newDesc formControlName="newDesc">
     </div>
     <div>
-        <input type="radio" name="orderType" formControlName="orderType" value="STDORD" > Standard Order Only
-        <input type="radio" name="orderType" formControlName="orderType" value="RC"> Recon only
-        <input type="radio" name="orderType" formControlName="orderType" value="both"> Standard and Recon
+        <input type="radio" name="updateSTDOrRC" formControlName="updateSTDOrRC" value="STDORD" > Standard Order Only
+        <input type="radio" name="updateSTDOrRC" formControlName="updateSTDOrRC" value="RC"> Recon only
+        <input type="radio" name="updateSTDOrRC" formControlName="updateSTDOrRC" value="both"> Standard and Recon
     </div>
+    <div class="center">
     <button type="submit">Submit</button>
-    <h1>{{clickMessage}}</h1>
+    <h3 *ngIf="clickMessage" class='message'>{{clickMessage}}</h3>
+    <h3 class='error'>{{error}}</h3>
+    </div>
 </form>
