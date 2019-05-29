@@ -6,10 +6,6 @@ div {
     text-align: center;
 }
 
-.message{
-    color: green;
-}
-
-.error{
-    color: red;
+.uppercase {
+  text-transform: uppercase;
 }

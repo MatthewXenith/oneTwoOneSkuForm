@@ -13,7 +13,6 @@ import { ToastrService } from 'ngx-toastr';
 export class ClickMeComponent implements OnInit{
   public skuForm: FormGroup;
   constructor(private skuService: SkuServiceService, private toastr: ToastrService) {
-    console.log(`hello from brandon`);
   }
 
   ngOnInit(){
@@ -39,14 +38,19 @@ export class ClickMeComponent implements OnInit{
     }
   }
   onError(error){
-    this.toastr.error('That did not work');
+    this.toastr.error('Failed to call salespad DB');
   }
 
   clickMessage;
   error;
 
   onSubmit(skuForm) {
-    //this.toastr.success('That worked');
-    this.updateSku(this.skuForm.value);
+    if (!this.skuForm.value.oldSku || !this.skuForm.value.newSku) {
+      this.toastr.error('Please Enter Values for both Old SKU and New SKU');
+    } else {
+    this.toastr.success('Test');
+    this.skuForm.reset();
+    //this.updateSku(this.skuForm.value);
+    }
   }
 }

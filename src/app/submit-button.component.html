@@ -1,14 +1,14 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="skuForm">
     <div>
         <label for="oldSku">Old SKU: </label>
-        <input id="oldSku" #oldSku formControlName="oldSku">
+        <input id="oldSku" class= "uppercase" #oldSku formControlName="oldSku">
     </div>
     <div>
         <label for="newSku">New SKU: </label>
-        <input id="newSku" #newSku formControlName="newSku">
+        <input id="newSku" class="uppercase" #newSku formControlName="newSku">
     </div>
     <div>
-        <label for="newDesc">New Description: </label>
+        <label for="newDesc">New Description (if necessary): </label>
         <input id="newDesc" #newDesc formControlName="newDesc">
     </div>
     <div>
