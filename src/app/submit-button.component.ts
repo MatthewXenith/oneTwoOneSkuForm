@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 export class ClickMeComponent implements OnInit{
   public skuForm: FormGroup;
   constructor(private skuService: SkuServiceService, private toastr: ToastrService) {
-
+    console.log(`hello from matt`);
   }
 
   ngOnInit(){
