@@ -1,7 +1,7 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="skuForm">
     <div>
         <label for="oldSku">Old SKU: </label>
-        <input id="oldSku" class= "uppercase" #oldSku formControlName="oldSku">
+        <input type="text" id="oldSku" class= "uppercase" #oldSku formControlName="oldSku" >
     </div>
     <div>
         <label for="newSku">New SKU: </label>
@@ -18,7 +18,5 @@
     </div>
     <div class="center">
     <button type="submit">Submit</button>
-    <h3 *ngIf="clickMessage" class='message'>{{clickMessage}}</h3>
-    <h3 class='error'>{{error}}</h3>
     </div>
 </form>

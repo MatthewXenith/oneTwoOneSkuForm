@@ -13,8 +13,8 @@ const httpOptions = {
 
 
 export class SkuServiceService {
-  //    skuUrl = 'https://jsonplaceholder.typicode.com/posts/1/comments';
-    skuUrl = 'http://sp-to-exp-staging-dev.us-e2.cloudhub.io/update/sku';
+      skuUrl = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+  //  skuUrl = 'http://sp-to-exp-staging-dev.us-e2.cloudhub.io/update/sku';
 
   constructor(private http: HttpClient) { }
 

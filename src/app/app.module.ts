@@ -13,6 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastContainerModule  } from 'ngx-toastr';
 import { AlertComponent } from './alert/alert.component';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+import { TrimValueAccessorModule } from 'ng-trim-value-accessor';
+
+//import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,11 @@ import { AlertComponent } from './alert/alert.component';
     CommonModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({ positionClass: 'inline' }), // ToastrModule added
-    ToastContainerModule
+    ToastContainerModule,
+    MDBBootstrapModule.forRoot(),
+    TrimValueAccessorModule
+    // MatButtonModule,
+    // MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
